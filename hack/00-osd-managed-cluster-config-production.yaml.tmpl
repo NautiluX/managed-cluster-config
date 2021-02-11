@@ -8481,11 +8481,11 @@ objects:
         permissions:
         - clusterRoleName: dedicated-admins-project
           namespacesAllowedRegex: .*
-          namespacesDeniedRegex: (^kube$|^kube-.*|^openshift$|^openshift-.*|^default$|^redhat-.*)
+          namespacesDeniedRegex: ^(?!openshift-operators(-redhat)?)(kube|kube-.*|openshift|openshift-.*|default|redhat-.*)$
           allowFirst: true
         - clusterRoleName: admin
           namespacesAllowedRegex: .*
-          namespacesDeniedRegex: (^kube$|^kube-.*|^openshift$|^openshift-.*|^default$|^redhat-.*)
+          namespacesDeniedRegex: ^(?!openshift-operators(-redhat)?)(kube|kube-.*|openshift|openshift-.*|default|redhat-.*)$
           allowFirst: true
 - apiVersion: hive.openshift.io/v1
   kind: SelectorSyncSet
